@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="num" placeholder="Enter number">
+<button onclick="show()">Square</button>
+<h3 id="result"></h3>
+<script>
+function square(n) {
+return n * n;  }
+function show() {
+let x = parseInt(num.value);
+result.innerHTML = "Square = " + square(x);  }
+</script>
+</body>
+</html>

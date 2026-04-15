@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Register</h2>
+<input id="ruser" placeholder="Username"><br><br>
+<input id="rpass" placeholder="Password"><br><br>
+<button onclick="reg()">Register</button>
+<h2>Login</h2>
+<input id="user" placeholder="Username"><br><br>
+<input id="pass" placeholder="Password"><br><br>
+<button onclick="login()">Login</button>
+<script>
+const reg = () => fetch("http://localhost:3000/register", {
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body: JSON.stringify({u:ruser.value, p:rpass.value})
+}).then(r=>r.text()).then(alert);
+const login = () => fetch("http://localhost:3000/login", {
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body: JSON.stringify({u:user.value, p:pass.value})
+}).then(r=>r.text()).then(alert);
+</script>
+</body>
+</html>

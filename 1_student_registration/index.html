@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form onsubmit="return check()">
+Name: <input id="n"><br><br>
+Email: <input id="e"><br><br>
+Password: <input type="password" id="p"><br><br>
+<button>Submit</button>
+</form>
+<script>
+function check() {
+if (n.value=="" || e.value=="" || p.value=="") {
+alert("Fill all fields"); return false;
+}
+if (p.value.length < 6) {
+alert("Password too short"); return false;
+}
+alert("Success");
+}
+</script>
+</body>
+</html>

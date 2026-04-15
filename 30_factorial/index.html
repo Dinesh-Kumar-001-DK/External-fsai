@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Factorial Calculator</h2>
+<input id="num" placeholder="Enter number"><br><br>
+<button onclick="fact()">Find Factorial</button>
+<h3 id="result"></h3>
+<script>
+function fact() {
+let n = parseInt(num.value);
+if (isNaN(n) || n < 0) {
+result.innerHTML = "Enter valid number";
+return;  }
+let f = 1;
+for (let i = 1; i <= n; i++) {
+f = f * i;   }
+result.innerHTML = "Factorial = " + f;  }
+</script>
+</body>
+</html>

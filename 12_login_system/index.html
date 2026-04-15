@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="u" placeholder="Username">
+<input id="p" placeholder="Password">
+<button onclick="r()">Register</button>
+<button onclick="l()">Login</button>
+<script>
+const r = () => fetch("http://localhost:3000/r", {
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body: JSON.stringify({u:u.value, p:p.value})
+}).then(r=>r.text()).then(alert);
+const l = () => fetch("http://localhost:3000/l", {
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body: JSON.stringify({u:u.value, p:p.value})
+}).then(r=>r.text()).then(alert);
+</script>
+</body>
+</html>

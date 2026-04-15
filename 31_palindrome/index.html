@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Palindrome Checker</h2>
+<input id="text" placeholder="Enter text"><br><br>
+<button onclick="check()">Check</button>
+<h3 id="result"></h3>
+<script>
+function check() {
+let str = text.value;
+if (str == "") {
+result.innerHTML = "Enter text";
+return;  }
+let rev = str.split("").reverse().join("");
+if (str === rev) {
+result.innerHTML = "Palindrome";
+} else {
+result.innerHTML = "Not Palindrome";   }   }
+</script>
+</body>
+</html>

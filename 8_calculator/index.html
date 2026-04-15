@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="n1" placeholder="Enter number 1"><br><br>
+<input id="n2" placeholder="Enter number 2"><br><br>
+<button onclick="calc('+')">+</button>
+<button onclick="calc('-')">-</button>
+<button onclick="calc('*')">*</button>
+<button onclick="calc('/')">/</button>
+<h3 id="result"></h3>
+<script>
+const calc = (op) => {
+let a = parseFloat(n1.value);
+let b = parseFloat(n2.value);
+let res;
+if (op==='+') res = a+b;
+else if (op==='-') res = a-b;
+else if (op==='*') res = a*b;
+else if (op==='/') res = a/b;
+result.innerHTML = "Result = " + res; };
+</script>
+</body>
+</html>

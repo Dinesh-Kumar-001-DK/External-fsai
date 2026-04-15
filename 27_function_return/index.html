@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Add Two Numbers</h2>
+<input id="a" placeholder="Enter first number"><br><br>
+<input id="b" placeholder="Enter second number"><br><br>
+<button onclick="show()">Calculate</button>
+<h3 id="result"></h3>
+<script>
+function add(x, y) {
+return x + y;  }
+function show() {
+let n1 = parseInt(a.value);
+let n2 = parseInt(b.value);
+let res = add(n1, n2);
+result.innerHTML = "Result = " + res;  }
+</script>  </body>
+</html>

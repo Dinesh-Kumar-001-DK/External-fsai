@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="name" placeholder="Name"><br><br>
+<input id="age" placeholder="Age"><br><br>
+<button onclick="send()">Submit</button>
+<script>
+function send() {
+fetch("http://localhost:3000/data", {
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body: JSON.stringify({
+name: name.value,
+age: age.value    })  })
+.then(r=>r.text())
+.then(alert);  }
+</script>
+</body>
+</html>

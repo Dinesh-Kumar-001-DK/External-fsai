@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { text-align:center; font-family:Arial; }
+input { width:200px; height:30px; margin:10px; }
+button { width:45px; height:40px; margin:5px; }
+</style>
+</head>
+<body>
+<h2>Simple Calculator</h2>
+<input id="display" readonly><br>
+<button onclick="add('1')">1</button>
+<button onclick="add('2')">2</button>
+<button onclick="add('3')">3</button>
+<button onclick="add('+')">+</button><br>
+<button onclick="add('4')">4</button>
+<button onclick="add('5')">5</button>
+<button onclick="add('6')">6</button>
+<button onclick="add('-')">-</button><br>
+<button onclick="add('7')">7</button>
+<button onclick="add('8')">8</button>
+<button onclick="add('9')">9</button>
+<button onclick="add('*')">*</button><br>
+<button onclick="add('0')">0</button>
+<button onclick="calc()">=</button>
+<button onclick="clr()">C</button>
+<button onclick="add('/')">/</button>
+<script>
+function add(v) {
+display.value += v;  }
+function calc() {
+display.value = eval(display.value);  }
+function clr() {
+display.value = ""; }
+</script>
+</body>
+</html>

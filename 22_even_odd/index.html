@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Even or Odd Checker</h2>
+<input id="num" placeholder="Enter number"><br><br>
+<button onclick="check()">Check</button>
+<h3 id="result"></h3>
+<script>
+function check() {
+let n = parseInt(num.value);
+if (isNaN(n)) {
+result.innerHTML = "Enter a valid number";
+return;  }
+if (n % 2 === 0) {
+result.innerHTML = n + " is Even";
+} else {
+result.innerHTML = n + " is Odd";  }}
+</script>
+</body>
+</html>

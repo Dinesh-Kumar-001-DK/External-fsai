@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Find Largest of 3 Numbers</h2>
+<input id="a" placeholder="Enter first number"><br><br>
+<input id="b" placeholder="Enter second number"><br><br>
+<input id="c" placeholder="Enter third number"><br><br>
+<button onclick="find()">Find Largest</button>
+<h3 id="result"></h3>
+<script>
+function find() {
+let x = parseInt(a.value);
+let y = parseInt(b.value);
+let z = parseInt(c.value);
+if (x >= y && x >= z) {
+result.innerHTML = "Largest = " + x;
+} else if (y >= x && y >= z) {
+result.innerHTML = "Largest = " + y;
+} else {
+result.innerHTML = "Largest = " + z;  }  }
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="nums" placeholder="Enter numbers (e.g. 1,5,3,9)">
+<button onclick="findMax()">Find Largest</button>
+<h3 id="result"></h3>
+<script>
+function findMax() {
+let arr = nums.value.split(",").map(Number);
+let max = arr[0];
+for (let i = 1; i < arr.length; i++) {
+if (arr[i] > max) {
+max = arr[i];  }  }
+result.innerHTML = "Largest = " + max;  }
+</script>  </body>
+</html>

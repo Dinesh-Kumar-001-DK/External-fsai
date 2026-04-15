@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Fibonacci Series</h2>
+<input id="num" placeholder="Enter number of terms">
+<button onclick="fib()">Generate</button>
+<p id="result"></p>
+<script>
+function fib() {
+let n = parseInt(num.value);
+let a = 0, b = 1;
+let output = "Series: " + a + " " + b;
+for (let i = 2; i < n; i++) {
+let c = a + b;
+output += " " + c;
+a = b;
+b = c;  }
+result.innerHTML = output;  }
+</script>
+</body>
+</html>
